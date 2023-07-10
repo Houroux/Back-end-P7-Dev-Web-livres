@@ -17,7 +17,8 @@ module.exports = multer({
 				.replaceAll(" ", "_")
 				.replace(RegExp("." + mimeTypesExt.join("|")), "");
 			const extension = MIME_TYPES[file.mimetype];
-			file.filename = name + Date.now() + "." + extension;
+			// file.filename = name + Date.now() + "." + extension;
+			file.filename = name + Date.now() + ".webp";
 			cb(null, true);
 		} else {
 			cb(new Error("Only images are allowed!"));
