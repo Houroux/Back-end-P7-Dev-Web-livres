@@ -31,6 +31,8 @@ exports.createBook = (req, res, next) => {
 		.catch((error) => res.status(404).json({ error }));
 };
 
+exports.createRating = (req, res, next) => {};
+
 exports.modifyBook = (req, res, next) => {
 	const bookObject = req.file
 		? {

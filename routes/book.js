@@ -11,7 +11,11 @@ router.get("/", bookCtrl.getAllBooks);
 
 router.get("/:id", bookCtrl.getOneBook);
 
+// router.get("/bestrating",  auth, bookCtrl.getBestRating);
+
 router.post("/", auth, multer, sharp, bookCtrl.createBook);
+
+router.post("/:id/rating", auth, bookCtrl.createRating);
 
 router.put("/:id", auth, multer, sharp, bookCtrl.modifyBook);
 
