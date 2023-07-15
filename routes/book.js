@@ -5,7 +5,7 @@ const auth = require("../middleware/auth");
 const multer = require("../middleware/multer-config");
 const sharp = require("../middleware/sharp");
 
-bookCtrl = require("../controllers/book");
+const bookCtrl = require("../controllers/book");
 
 router.get("/", bookCtrl.getAllBooks);
 

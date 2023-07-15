@@ -49,7 +49,6 @@ exports.createRating = (req, res, next) => {
 	const newRating = { userId, grade };
 	Book.findOne({ _id: req.params.id })
 		.then((book) => {
-			const bookRatings = book.ratings;
 			if (
 				book.ratings.find((rating) => req.auth.userId === rating.userId) !==
 				undefined
